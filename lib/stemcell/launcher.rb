@@ -46,6 +46,7 @@ module Stemcell
       'availability_zone',
       'count',
       'security_groups',
+      'subnet',
       'tags',
       'iam_role',
       'ebs_optimized',
@@ -115,6 +116,11 @@ module Stemcell
       # specify IAM role (optional)
       if opts['iam_role']
         launch_options[:iam_instance_profile] = opts['iam_role']
+      end
+
+      # specify subnet role (optional)
+      if opts['subnet']
+        launch_options[:subnet] = opts['subnet']
       end
 
       # specify placement group (optional)

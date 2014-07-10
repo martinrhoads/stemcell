@@ -90,6 +90,12 @@ module Stemcell
         :env   => 'IAM_ROLE'
       },
       {
+        :name  => 'subnet',
+        :desc  => "VPC subnet to launch instance into",
+        :type  => String,
+        :env   => 'SUBNET'
+      },
+      {
         :name  => 'placement_group',
         :desc  => "Placement group to associate with the instance",
         :type  => String,
